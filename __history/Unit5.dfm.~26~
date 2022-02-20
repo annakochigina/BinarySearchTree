@@ -1,0 +1,388 @@
+object Form5: TForm5
+  Left = 360
+  Top = 145
+  BorderIcons = []
+  ClientHeight = 695
+  ClientWidth = 971
+  Color = clGradientActiveCaption
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesigned
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 24
+    Top = 80
+    Width = 713
+    Height = 25
+    AutoSize = False
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Form5Image1: TImage
+    Left = 136
+    Top = 144
+    Width = 801
+    Height = 377
+  end
+  object LbAnswer: TLabel
+    Left = 136
+    Top = 544
+    Width = 801
+    Height = 25
+    AutoSize = False
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+  end
+  object LbName: TLabel
+    Left = 417
+    Top = 16
+    Width = 105
+    Height = 25
+    AutoSize = False
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object MainMenuForm3: TButton
+    Left = 8
+    Top = 654
+    Width = 89
+    Height = 33
+    Caption = #1043#1083#1072#1074#1085#1086#1077' '#1084#1077#1085#1102
+    TabOrder = 0
+    OnClick = MainMenuForm3Click
+  end
+  object B1: TButton
+    Left = 517
+    Top = 160
+    Width = 38
+    Height = 21
+    Caption = '1'
+    TabOrder = 1
+    OnClick = B1Click
+  end
+  object B2: TButton
+    Left = 317
+    Top = 230
+    Width = 38
+    Height = 21
+    Caption = '2'
+    TabOrder = 2
+    OnClick = B2Click
+  end
+  object B3: TButton
+    Left = 717
+    Top = 230
+    Width = 38
+    Height = 21
+    Caption = '3'
+    TabOrder = 3
+    OnClick = B3Click
+  end
+  object B4: TButton
+    Left = 217
+    Top = 298
+    Width = 38
+    Height = 21
+    Caption = '4'
+    TabOrder = 4
+    OnClick = B4Click
+  end
+  object B5: TButton
+    Left = 417
+    Top = 298
+    Width = 38
+    Height = 21
+    Caption = '5'
+    TabOrder = 5
+    OnClick = B5Click
+  end
+  object B6: TButton
+    Left = 617
+    Top = 298
+    Width = 38
+    Height = 21
+    Caption = '6'
+    TabOrder = 6
+    OnClick = B6Click
+  end
+  object B7: TButton
+    Left = 817
+    Top = 300
+    Width = 38
+    Height = 21
+    Caption = '7'
+    TabOrder = 7
+    OnClick = B7Click
+  end
+  object B9: TButton
+    Left = 267
+    Top = 370
+    Width = 38
+    Height = 21
+    Caption = '9'
+    TabOrder = 8
+    OnClick = B9Click
+  end
+  object B8: TButton
+    Left = 167
+    Top = 370
+    Width = 38
+    Height = 21
+    Caption = '8'
+    TabOrder = 9
+    OnClick = B8Click
+  end
+  object B11: TButton
+    Left = 467
+    Top = 370
+    Width = 38
+    Height = 21
+    Caption = '11'
+    TabOrder = 10
+    OnClick = B11Click
+  end
+  object B10: TButton
+    Left = 367
+    Top = 370
+    Width = 38
+    Height = 21
+    Caption = '10'
+    TabOrder = 11
+    OnClick = B10Click
+  end
+  object B13: TButton
+    Left = 667
+    Top = 370
+    Width = 38
+    Height = 21
+    Caption = '13'
+    TabOrder = 12
+    OnClick = B13Click
+  end
+  object B12: TButton
+    Left = 567
+    Top = 370
+    Width = 38
+    Height = 21
+    Caption = '12'
+    TabOrder = 13
+    OnClick = B12Click
+  end
+  object B15: TButton
+    Left = 867
+    Top = 370
+    Width = 38
+    Height = 21
+    Caption = '15'
+    TabOrder = 14
+    OnClick = B15Click
+  end
+  object B14: TButton
+    Left = 767
+    Top = 370
+    Width = 38
+    Height = 21
+    Caption = '14'
+    TabOrder = 15
+    OnClick = B14Click
+  end
+  object B17: TButton
+    Left = 192
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '17'
+    TabOrder = 16
+    OnClick = B17Click
+  end
+  object B16: TButton
+    Left = 142
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '16'
+    TabOrder = 17
+    OnClick = B16Click
+  end
+  object B19: TButton
+    Left = 292
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '19'
+    TabOrder = 18
+    OnClick = B19Click
+  end
+  object B18: TButton
+    Left = 242
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '18'
+    TabOrder = 19
+    OnClick = B18Click
+  end
+  object B21: TButton
+    Left = 392
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '21'
+    TabOrder = 20
+    OnClick = B21Click
+  end
+  object B20: TButton
+    Left = 342
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '20'
+    TabOrder = 21
+    OnClick = B20Click
+  end
+  object B23: TButton
+    Left = 492
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '23'
+    TabOrder = 22
+    OnClick = B23Click
+  end
+  object B22: TButton
+    Left = 442
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '22'
+    TabOrder = 23
+    OnClick = B22Click
+  end
+  object B25: TButton
+    Left = 592
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '25'
+    TabOrder = 24
+    OnClick = B25Click
+  end
+  object B24: TButton
+    Left = 542
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '24'
+    TabOrder = 25
+    OnClick = B24Click
+  end
+  object B27: TButton
+    Left = 692
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '27'
+    TabOrder = 26
+    OnClick = B27Click
+  end
+  object B26: TButton
+    Left = 642
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '26'
+    TabOrder = 27
+    OnClick = B26Click
+  end
+  object B29: TButton
+    Left = 792
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '29'
+    TabOrder = 28
+    OnClick = B29Click
+  end
+  object B28: TButton
+    Left = 742
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '28'
+    TabOrder = 29
+    OnClick = B28Click
+  end
+  object B31: TButton
+    Left = 892
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '31'
+    TabOrder = 30
+    OnClick = B31Click
+  end
+  object B30: TButton
+    Left = 842
+    Top = 440
+    Width = 38
+    Height = 21
+    Caption = '30'
+    TabOrder = 31
+    OnClick = B30Click
+  end
+  object BtAnswer: TButton
+    Left = 873
+    Top = 654
+    Width = 90
+    Height = 33
+    Caption = #1055#1088#1086#1074#1077#1088#1082#1072
+    TabOrder = 32
+    OnClick = BtAnswerClick
+  end
+  object BtChange: TButton
+    Left = 342
+    Top = 654
+    Width = 95
+    Height = 33
+    Caption = #1055#1086#1074#1090#1086#1088#1080#1090#1100
+    TabOrder = 33
+    Visible = False
+    OnClick = BtChangeClick
+  end
+  object BtTrueAnswer: TButton
+    Left = 681
+    Top = 654
+    Width = 110
+    Height = 33
+    Caption = #1055#1088#1072#1074#1080#1083#1100#1085#1099#1081' '#1086#1090#1074#1077#1090
+    TabOrder = 34
+    Visible = False
+    OnClick = BtTrueAnswerClick
+  end
+  object BtOther: TButton
+    Left = 235
+    Top = 654
+    Width = 95
+    Height = 33
+    Caption = #1044#1088#1091#1075#1086#1081' '#1087#1088#1080#1084#1077#1088
+    TabOrder = 35
+    OnClick = BtOtherClick
+  end
+end

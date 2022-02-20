@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.218,=C:\Users\ilyag\Desktop\Delphi проект\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.514,=C:\Users\super\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.375,=C:\Users\super\Desktop\проект\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.659,C:\Users\super\Desktop\проект\Unit1.pas=C:\Users\super\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.290,=D:\Учеба\2 курс\4 семестр\ПРАКТИКИ\Летняя\Delphi проект\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.378,=C:\Users\super\Desktop\Delphi проект\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.095,=E:\Учёба\ПРАКТИКИ\Летняя\Delphi проект\Unit6.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.737,E:\Учёба\ПРАКТИКИ\Летняя\Delphi проект\Unit6.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.483,C:\Users\super\Desktop\проект\Project1.dproj=C:\Users\super\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.189,=E:\Учёба\ПРАКТИКИ\Летняя\Delphi проект\Unit7.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.659,C:\Users\super\Desktop\проект\Unit1.dfm=C:\Users\super\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Unit1.pas"/>
+    <File Path="Unit1.dfm"/>
+    <File Path="Unit2.pas"/>
+    <File Path="Unit2.dfm"/>
+    <File Path="Unit3.pas"/>
+    <File Path="Unit3.dfm"/>
+    <File Path="Unit4.pas"/>
+    <File Path="Unit4.dfm"/>
+    <File Path="Unit5.pas"/>
+    <File Path="Unit5.dfm"/>
+    <File Path="Unit7.pas"/>
+    <File Path="Unit7.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

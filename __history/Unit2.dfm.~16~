@@ -1,0 +1,67 @@
+object Form2: TForm2
+  Left = 540
+  Top = 125
+  BorderIcons = []
+  ClientHeight = 686
+  ClientWidth = 959
+  Color = clGradientActiveCaption
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesigned
+  PixelsPerInch = 96
+  TextHeight = 13
+  object NameLb: TLabel
+    Left = 280
+    Top = 32
+    Width = 409
+    Height = 36
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -32
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Image1: TImage
+    Left = 32
+    Top = 96
+    Width = 489
+    Height = 538
+  end
+  object Image2: TImage
+    Left = 535
+    Top = 96
+    Width = 386
+    Height = 538
+  end
+  object MainMenu: TButton
+    Left = 8
+    Top = 640
+    Width = 89
+    Height = 33
+    Caption = #1043#1083#1072#1074#1085#1086#1077' '#1084#1077#1085#1102
+    TabOrder = 0
+    OnClick = MainMenuClick
+  end
+  object BackForm2: TButton
+    Left = 112
+    Top = 640
+    Width = 89
+    Height = 33
+    Caption = #1053#1072#1079#1072#1076
+    TabOrder = 1
+    OnClick = BackForm2Click
+  end
+  object NextForm2: TButton
+    Left = 831
+    Top = 640
+    Width = 90
+    Height = 33
+    Caption = #1042#1087#1077#1088#1077#1076
+    TabOrder = 2
+  end
+end

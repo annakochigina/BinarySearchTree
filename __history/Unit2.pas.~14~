@@ -1,0 +1,53 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TForm2 = class(TForm)
+    MainMenu: TButton;
+    NameLb: TLabel;
+    Image1: TImage;
+    BackForm2: TButton;
+    Image2: TImage;
+    NextForm2: TButton;
+    procedure MainMenuClick(Sender: TObject);
+    procedure BackForm2Click(Sender: TObject);
+    procedure NextForm2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+Uses Unit1;
+{$R *.dfm}
+
+
+procedure TForm2.BackForm2Click(Sender: TObject);
+begin
+    nform:= nform - 1;
+    MainForm.NumberForm2(nform);
+end;
+
+procedure TForm2.MainMenuClick(Sender: TObject);
+begin
+    Form2.Hide;
+    MainForm.Show;
+end;
+
+procedure TForm2.NextForm2Click(Sender: TObject);
+begin
+    nform:= nform + 1;
+    MainForm.NumberForm2(nform);
+end;
+
+end.
