@@ -37,7 +37,6 @@ type
     procedure N10Click(Sender: TObject);
     procedure N21Click(Sender: TObject);
     procedure N31Click(Sender: TObject);
-    procedure N4Click(Sender: TObject);
     procedure N12Click(Sender: TObject);
   private
      { Private declarations }
@@ -85,7 +84,7 @@ var
 implementation
 {$R *.dfm}
 
-uses Unit4, Unit5, Unit6, Unit7;
+uses Unit4, Unit5, Unit7;
 
 // создание дерева//
 constructor TSortTree.Create(k:integer);
@@ -169,14 +168,6 @@ begin
     number_chislo := 0;
     nform5 := 2;
     Form5.NumberForm5(nform5);
-end;
-
-procedure TMainForm.N4Click(Sender: TObject);
-begin
-    MainForm.Hide;
-    Form6.Show;
-    nform6 := 3;
-    Form6.NumberForm6(nform6);
 end;
 
 procedure TMainForm.N5Click(Sender: TObject); //форма 4 - тренажер
