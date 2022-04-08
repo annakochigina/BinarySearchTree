@@ -11,7 +11,6 @@ type
   TForm7 = class(TForm)
     Label1: TLabel;
     Image1: TImage;
-    BBMainMenuForm4: TBitBtn;
     procedure BBMainMenuForm4Click(Sender: TObject);
   private
     { Private declarations }

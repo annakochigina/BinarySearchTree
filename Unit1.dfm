@@ -1,6 +1,6 @@
 object MainForm: TMainForm
-  Left = 343
-  Top = 154
+  Left = 340
+  Top = 166
   BorderIcons = [biSystemMenu]
   ClientHeight = 666
   ClientWidth = 959
@@ -33,7 +33,7 @@ object MainForm: TMainForm
     Top = 534
     Width = 257
     Height = 23
-    Caption = #1089#1090#1091#1076#1077#1085#1090' 2 '#1082#1091#1088#1089#1072', '#1075#1088#1091#1087#1087#1099' 2905'
+    Caption = #1089#1090#1091#1076#1077#1085#1090' 3 '#1082#1091#1088#1089#1072', '#1075#1088#1091#1087#1087#1099' 2905'
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
     Font.Height = -21
@@ -55,10 +55,10 @@ object MainForm: TMainForm
     ParentFont = False
   end
   object Image1: TImage
-    Left = 470
-    Top = 296
-    Width = 497
-    Height = 385
+    Left = 464
+    Top = 272
+    Width = 511
+    Height = 401
     Picture.Data = {
       0A544A504547496D61676573170100FFD8FFE000104A46494600010101006000
       600000FFE100224578696600004D4D002A000000080001011200030000000100
@@ -2355,6 +2355,10 @@ object MainForm: TMainForm
         Caption = #1057#1074#1086#1081#1089#1090#1074#1086' '#1073#1080#1085#1072#1088#1085#1086#1075#1086' '#1076#1077#1088#1077#1074#1072
         OnClick = N31Click
       end
+    end
+    object N4: TMenuItem
+      Caption = #1050#1086#1085#1090#1088#1086#1083#1100
+      OnClick = N4Click
     end
     object N11: TMenuItem
       Caption = #1055#1086#1084#1086#1097#1100

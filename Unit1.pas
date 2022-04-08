@@ -28,6 +28,7 @@ type
     N12: TMenuItem;
     Image1: TImage;
     Label1: TLabel;
+    N4: TMenuItem;
     procedure N6Click(Sender: TObject);
     procedure N7Click(Sender: TObject);
     procedure NumberForm2(nform2: integer);
@@ -38,6 +39,7 @@ type
     procedure N21Click(Sender: TObject);
     procedure N31Click(Sender: TObject);
     procedure N12Click(Sender: TObject);
+    procedure N4Click(Sender: TObject);
   private
      { Private declarations }
   public
@@ -73,18 +75,23 @@ type
             function Minimum_Tree (x : TSortTree): integer;
             procedure Visiting_Nodes_ForMaxMin (x : TSortTree);
             procedure Visiting_Property (x : TSortTree);
+            procedure Visiting_Nodes_task (x : TSortTree; number_node_task : integer);
+            procedure Visiting_Nodes2_ForKeys_task (x : TSortTree);
+            procedure Visiting_Nodes2_ForKeysStud_task (x : TSortTree);
+            function Add_Keys_task (x : TSortTree): integer;
+            procedure Visiting_Nodes_ForProperty_task3 (x : TSortTree);
   end;
 
 var
   MainForm : TMainForm;
-  nform2, nform3, nform4, nform5, nform6, number_node, count_nodes,number_chislo, maximum, minimum, min, max : integer;
-  tree3, tree3node, tree3copy, tree4, tree5, tree6 : TSortTree;
+  nform2, nform3, nform4, nform5, nform6, number_node, count_nodes,count_nodes_task, count_nodes_task3, number_node_task3, number_node_task, number_chislo, maximum, minimum, min, max : integer;
+  tree3, tree3node, tree3copy, tree5, tree6, tree4, tree_task1, tree_task2, tree_task3 : TSortTree;
   countlevel,countdepth,lvly,radius : integer;
   flag : boolean;
 implementation
 {$R *.dfm}
 
-uses Unit4, Unit5, Unit7;
+uses Unit4, Unit5, Unit6, Unit7, Unit8, Unit9, Unit10;
 
 // создание дерева//
 constructor TSortTree.Create(k:integer);
@@ -123,16 +130,16 @@ begin
       Form2.BBNext.Visible := True;
     end;
     2: begin
-      Form2.NameLb.Caption := 'Высота бинарного дерева поиска';
+      Form2.NameLb.Caption := 'Высота бинарного дерева';
       Form2.Image1.Picture.LoadFromFile('Картинки/Теория2.bmp');
-      Form2.Image2.Picture.LoadFromFile('Картинки/Рисунок2полный.bmp');
+      Form2.Image2.Picture.LoadFromFile('Картинки/рисунок2.bmp');
       Form2.BBBack.Visible := True;
       Form2.BBNext.Visible := True;
     end;
     3: begin
-      Form2.NameLb.Caption := 'Сбалансированность дерева поиска';
+      Form2.NameLb.Caption := 'Сбалансированность бинарного дерева';
       Form2.Image1.Picture.LoadFromFile('Картинки/Теория3.bmp');
-      Form2.Image2.Picture.LoadFromFile('Картинки/Рисунок3полный.bmp');
+      Form2.Image2.Picture.LoadFromFile('Картинки/рисунок3.bmp');
       Form2.BBBack.Visible := True;
       Form2.BBNext.Visible := False;
     end;
@@ -149,7 +156,6 @@ end;
 
 procedure TMainForm.N12Click(Sender: TObject);
 begin
-   MainForm.Hide;
    Form7.Show;
 end;
 
@@ -168,6 +174,12 @@ begin
     number_chislo := 0;
     nform5 := 2;
     Form5.NumberForm5(nform5);
+end;
+
+procedure TMainForm.N4Click(Sender: TObject);
+begin
+    MainForm.Hide;
+    Form6.Show;
 end;
 
 procedure TMainForm.N5Click(Sender: TObject); //форма 4 - тренажер
@@ -393,7 +405,7 @@ begin
     Canvas.Rectangle((xmax-xmin) div 2+xmin-18,y ,(xmax-xmin) div 2+xmin+18,y+15);
     Canvas.Rectangle((xmax-xmin) div 2+xmin-18,y+15 ,(xmax-xmin) div 2+xmin+18,y+30);
     Canvas.Rectangle((xmax-xmin) div 2+xmin-18,y+30 ,(xmax-xmin) div 2+xmin+18,y+45);
-    Canvas.textout((xmax-xmin) div 2+xmin - 5,y+1,IntToStr(x.Info));
+    Canvas.textout((xmax-xmin) div 2+xmin - 5,y+1,IntToStr(x.info));
     WritelnTreeforForm5(x.Left,xmin,(xmax+xmin) div 2,y+70,countlevel+1, Canvas);
     WritelnTreeforForm5(x.Right,(xmax+xmin) div 2,xmax,y+70,countlevel+1, Canvas);
   end;
@@ -444,6 +456,20 @@ begin
     end;
 end;
 
+procedure TSortTree.Visiting_Nodes_task (x : TSortTree; number_node_task : integer);
+begin
+    if x <> nil then begin
+        massiv_node_task[count_nodes_task] := x.info;
+        inc(count_nodes_task);
+        x.Number := number_node_task;
+        massiv_edit_visible_task[number_node_task] := True;
+        Visiting_Nodes_task(x.Left, 2 * number_node_task);
+        x.Number := number_node_task;
+        massiv_edit_visible_task[number_node_task] := True;
+        Visiting_Nodes_task(x.Right, 2 * number_node_task + 1);
+    end;
+end;
+
 procedure TSortTree.Visiting_Nodes2_ForKeys (x : TSortTree);
 begin
     if x <> nil then begin
@@ -451,6 +477,16 @@ begin
         massiv_true_answer[x.Number] := x.key;
         Visiting_Nodes2_ForKeys(x.Left);
         Visiting_Nodes2_ForKeys(x.Right);
+    end;
+end;
+
+procedure TSortTree.Visiting_Nodes2_ForKeys_task (x : TSortTree);
+begin
+    if x <> nil then begin
+        x.key := Add_Keys_task(x);
+        massiv_true_answer_task[x.Number] := x.key;
+        Visiting_Nodes2_ForKeys_task(x.Left);
+        Visiting_Nodes2_ForKeys_task(x.Right);
     end;
 end;
 
@@ -463,6 +499,15 @@ begin
     end;
 end;
 
+procedure TSortTree.Visiting_Nodes2_ForKeysStud_task (x : TSortTree);
+begin
+    if x <> nil then begin
+        x.key_stud := massiv_answer_student_task[x.Number];
+        Visiting_Nodes2_ForKeysStud_task(x.Left);
+        Visiting_Nodes2_ForKeysStud_task(x.Right);
+    end;
+end;
+
 function TSortTree.Add_Keys (x : TSortTree): integer;
 var i, keys: Integer;
 begin
@@ -470,6 +515,15 @@ begin
         if massiv_node[i] = x.info then
             keys := i;
     Add_Keys := keys;
+end;
+
+function TSortTree.Add_Keys_task (x : TSortTree): integer;
+var i, keys: Integer;
+begin
+    for i := 1 to count_nodes_task do
+        if massiv_node_task[i] = x.info then
+            keys := i;
+    Add_Keys_task := keys;
 end;
 
 procedure TSortTree.Copy_tree( t : TSortTree; var v : TSortTree);//копирование
@@ -535,6 +589,19 @@ begin
         massiv_button[x.number].Caption := IntToStr(x.propert);
         Visiting_Nodes_ForProperty (x.Left);
         Visiting_Nodes_ForProperty (x.Right);
+    end;
+end;
+
+procedure TSortTree.Visiting_Nodes_ForProperty_task3 (x : TSortTree);
+var s : string;
+begin
+    if x <> nil then begin
+        inc(number_chislo);
+        x.propert := massiv_chisel_task3[number_chislo];
+        x.info := x.propert;
+        massiv_button[x.number].Caption := IntToStr(x.propert);
+        Visiting_Nodes_ForProperty_task3 (x.Left);
+        Visiting_Nodes_ForProperty_task3 (x.Right);
     end;
 end;
 

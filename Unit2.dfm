@@ -1,5 +1,5 @@
 object Form2: TForm2
-  Left = 460
+  Left = 320
   Top = 145
   BorderIcons = []
   ClientHeight = 686
@@ -15,8 +15,8 @@ object Form2: TForm2
   PixelsPerInch = 96
   TextHeight = 13
   object NameLb: TLabel
-    Left = 280
-    Top = 32
+    Left = 240
+    Top = 40
     Width = 8
     Height = 36
     Font.Charset = RUSSIAN_CHARSET
@@ -27,7 +27,7 @@ object Form2: TForm2
     ParentFont = False
   end
   object Image1: TImage
-    Left = 24
+    Left = 40
     Top = 96
     Width = 489
     Height = 538

@@ -1,5 +1,5 @@
 object Form4: TForm4
-  Left = 380
+  Left = 340
   Top = 145
   BorderIcons = []
   ClientHeight = 695
@@ -10,6 +10,7 @@ object Form4: TForm4
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  Menu = MainMenu1
   OldCreateOrder = False
   Position = poDesigned
   PixelsPerInch = 96
@@ -254,7 +255,7 @@ object Form4: TForm4
     Visible = False
   end
   object BtAnswer: TButton
-    Left = 868
+    Left = 873
     Top = 654
     Width = 90
     Height = 33
@@ -420,5 +421,13 @@ object Form4: TForm4
       D2BAEFD4BAEACFB5F0D5BBEED3B9EFD5BDEAD0B8E9D1BBE8D0BAEBD1B900}
     TabOrder = 20
     OnClick = BBMainMenuForm4Click
+  end
+  object MainMenu1: TMainMenu
+    Left = 8
+    Top = 8
+    object N16: TMenuItem
+      Caption = #1050#1072#1082' '#1088#1072#1073#1086#1090#1072#1077#1090' '#1090#1088#1077#1085#1072#1078#1077#1088'?'
+      OnClick = N16Click
+    end
   end
 end

@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons,
+  Vcl.Menus;
 
 type
   TForm5 = class(TForm)
@@ -49,6 +50,8 @@ type
     LbName: TLabel;
     BBMainMenuForm5: TBitBtn;
     Label2: TLabel;
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
     procedure NumberForm5 (nform5 : integer);
     procedure MainMenuForm3Click(Sender: TObject);
     procedure AddButton;
@@ -94,6 +97,7 @@ type
     procedure AddTree (n : integer);
     procedure RandomNodes;
     procedure BBMainMenuForm5Click(Sender: TObject);
+    procedure N1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -116,7 +120,7 @@ implementation
 
 {$R *.dfm}
 
-uses Unit1;
+uses Unit1, Unit7;
 
 procedure TForm5.B10Click(Sender: TObject);
 begin
@@ -546,56 +550,56 @@ begin
             tree5.AddNode(20, tree5);
             tree5.AddNode(28, tree5);
         end;
-//        6: begin
-//            tree4 := TSortTree.Create(9);
-//            tree4.AddNode(5, tree4);
-//            tree4.AddNode(3, tree4);
-//            tree4.AddNode(7, tree4);
-//            tree4.AddNode(6, tree4);
-//            tree4.AddNode(14, tree4);
-//            tree4.AddNode(15, tree4);
-//            tree4.AddNode(12, tree4);
-//            tree4.AddNode(13, tree4);
-//        end;
-//        7: begin
-//            tree4 := TSortTree.Create(5);
-//            tree4.AddNode(2, tree4);
-//            tree4.AddNode(1, tree4);
-//            tree4.AddNode(3, tree4);
-//            tree4.AddNode(8, tree4);
-//            tree4.AddNode(6, tree4);
-//        end;
-//        8: begin
-//            tree4 := TSortTree.Create(9);
-//            tree4.AddNode(8, tree4);
-//            tree4.AddNode(7, tree4);
-//            tree4.AddNode(6, tree4);
-//            tree4.AddNode(14, tree4);
-//            tree4.AddNode(16, tree4);
-//            tree4.AddNode(15, tree4);
-//            tree4.AddNode(12, tree4);
-//            tree4.AddNode(11, tree4);
-//        end;
-//        9: begin
-//            tree4 := TSortTree.Create(9);
-//            tree4.AddNode(5, tree4);
-//            tree4.AddNode(7, tree4);
-//            tree4.AddNode(6, tree4);
-//            tree4.AddNode(14, tree4);
-//            tree4.AddNode(12, tree4);
-//            tree4.AddNode(11, tree4);
-//            tree4.AddNode(13, tree4);
-//        end;
-//        10: begin
-//            tree4 := TSortTree.Create(9);
-//            tree4.AddNode(5, tree4);
-//            tree4.AddNode(14, tree4);
-//            tree4.AddNode(16, tree4);
-//            tree4.AddNode(17, tree4);
-//            tree4.AddNode(15, tree4);
-//            tree4.AddNode(11, tree4);
-//            tree4.AddNode(13, tree4);
-//        end;
+        6: begin
+            tree4 := TSortTree.Create(9);
+            tree4.AddNode(5, tree4);
+            tree4.AddNode(3, tree4);
+            tree4.AddNode(7, tree4);
+            tree4.AddNode(6, tree4);
+            tree4.AddNode(14, tree4);
+            tree4.AddNode(15, tree4);
+            tree4.AddNode(12, tree4);
+            tree4.AddNode(13, tree4);
+        end;
+        7: begin
+            tree4 := TSortTree.Create(5);
+            tree4.AddNode(2, tree4);
+            tree4.AddNode(1, tree4);
+            tree4.AddNode(3, tree4);
+            tree4.AddNode(8, tree4);
+            tree4.AddNode(6, tree4);
+        end;
+        8: begin
+            tree4 := TSortTree.Create(9);
+            tree4.AddNode(8, tree4);
+            tree4.AddNode(7, tree4);
+            tree4.AddNode(6, tree4);
+            tree4.AddNode(14, tree4);
+            tree4.AddNode(16, tree4);
+            tree4.AddNode(15, tree4);
+            tree4.AddNode(12, tree4);
+            tree4.AddNode(11, tree4);
+        end;
+        9: begin
+            tree4 := TSortTree.Create(9);
+            tree4.AddNode(5, tree4);
+            tree4.AddNode(7, tree4);
+            tree4.AddNode(6, tree4);
+            tree4.AddNode(14, tree4);
+            tree4.AddNode(12, tree4);
+            tree4.AddNode(11, tree4);
+            tree4.AddNode(13, tree4);
+        end;
+        10: begin
+            tree4 := TSortTree.Create(9);
+            tree4.AddNode(5, tree4);
+            tree4.AddNode(14, tree4);
+            tree4.AddNode(16, tree4);
+            tree4.AddNode(17, tree4);
+            tree4.AddNode(15, tree4);
+            tree4.AddNode(11, tree4);
+            tree4.AddNode(13, tree4);
+        end;
 
   end;
 
@@ -677,6 +681,11 @@ begin
     MainForm.Show;
 end;
 
+procedure TForm5.N1Click(Sender: TObject);
+begin
+    Form7.Show;
+end;
+
 procedure TForm5.NumberForm5 (nform5 : integer);
 var i, j, x : integer;
 begin
@@ -688,7 +697,7 @@ begin
     BtChange.Visible := False;
     case nform5 of
       1: begin
-        LbName.Caption := '—балансированность бинарного дерева поиска';
+        LbName.Caption := '—балансированность бинарного дерева';
         Label1.Caption := '”кажите вершины, в которых нарушаетс€ сбалансированность';
         AddButton;
         ButtonFalse;
@@ -704,7 +713,7 @@ begin
       end;
       2: begin
         LbName.Caption := '—войство бинарного дерева поиска';
-        Label1.Caption := '”кажите вершины, в которых нарушаетс€ свойство бинарного дерева';
+        Label1.Caption := '”кажите вершины, в которых нарушаетс€ свойство упор€доченности бинарного дерева';
         AddButton;
         ButtonFalse;
         RandomTree (number_tree);

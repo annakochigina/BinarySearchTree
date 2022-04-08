@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 360
-  Top = 145
+  Left = 343
+  Top = 154
   BorderIcons = []
   ClientHeight = 686
   ClientWidth = 959
@@ -87,6 +87,7 @@ object Form3: TForm3
     Width = 346
     Height = 89
     AutoSize = False
+    Caption = #1053#1072#1095#1085#1077#1084'!'
     Font.Charset = RUSSIAN_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
@@ -94,6 +95,7 @@ object Form3: TForm3
     Font.Style = []
     ParentFont = False
     TabOrder = 0
+    Visible = False
   end
   object BB1: TBitBtn
     Left = 352

@@ -485,7 +485,7 @@ begin
     d := 0;
     tree3copy.Depth(tree3copy, d);
     if d > 4 then begin
-        MessageDlg('Укажите другой узел', mtInformation, [mbOk], 0);
+        MessageDlg('Высота дерева не может превышать 4. Укажите другой узел', mtInformation, [mbOk], 0);
     end
     else begin
         tree3node.AddNode (node,tree3node);

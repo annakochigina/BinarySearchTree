@@ -1,6 +1,6 @@
 object Form5: TForm5
   Left = 360
-  Top = 145
+  Top = 166
   BorderIcons = []
   ClientHeight = 686
   ClientWidth = 971
@@ -10,6 +10,7 @@ object Form5: TForm5
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  Menu = MainMenu1
   OldCreateOrder = False
   Position = poDesigned
   PixelsPerInch = 96
@@ -17,7 +18,7 @@ object Form5: TForm5
   object Label1: TLabel
     Left = 24
     Top = 80
-    Width = 713
+    Width = 905
     Height = 25
     AutoSize = False
     Font.Charset = RUSSIAN_CHARSET
@@ -47,7 +48,7 @@ object Form5: TForm5
     ParentFont = False
   end
   object LbName: TLabel
-    Left = 184
+    Left = 227
     Top = 32
     Width = 681
     Height = 33
@@ -507,5 +508,13 @@ object Form5: TForm5
       D2BAEFD4BAEACFB5F0D5BBEED3B9EFD5BDEAD0B8E9D1BBE8D0BAEBD1B900}
     TabOrder = 35
     OnClick = BBMainMenuForm5Click
+  end
+  object MainMenu1: TMainMenu
+    Left = 8
+    Top = 8
+    object N1: TMenuItem
+      Caption = #1050#1072#1082' '#1088#1072#1073#1086#1090#1072#1077#1090' '#1090#1088#1077#1085#1072#1078#1077#1088'?'
+      OnClick = N1Click
+    end
   end
 end

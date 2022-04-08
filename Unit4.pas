@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons,
+  Vcl.Menus;
 
 type
   TForm4 = class(TForm)
@@ -38,6 +39,8 @@ type
     BtChange: TButton;
     BtOther: TButton;
     BBMainMenuForm4: TBitBtn;
+    MainMenu1: TMainMenu;
+    N16: TMenuItem;
     procedure MainMenuForm3Click(Sender: TObject);
     procedure AddTree(n : integer);
     procedure printtree4foraddnode;
@@ -55,6 +58,7 @@ type
     procedure RandomTree (var number_tree : integer);
     procedure BtOtherClick(Sender: TObject);
     procedure BBMainMenuForm4Click(Sender: TObject);
+    procedure N16Click(Sender: TObject);
 
   private
     { Private declarations }
@@ -76,7 +80,7 @@ implementation
 
 {$R *.dfm}
 
-uses Unit1;
+uses Unit1, Unit7;
 
 procedure TForm4.MainMenuForm3Click(Sender: TObject);
 var i : integer;
@@ -90,6 +94,11 @@ begin
         end;
     Form4.Hide;
     MainForm.Show;
+end;
+
+procedure TForm4.N16Click(Sender: TObject);
+begin
+    Form7.Show;
 end;
 
 procedure TForm4.NumberForm4 (nform4 : integer);
@@ -322,21 +331,35 @@ begin
 end;
 
 procedure TForm4.BtAnswerClick(Sender: TObject);
-var i : integer;
+var i, count, count1, s : integer;
 begin
-    if change = 3 then
-        BtChange.Visible := False
-    else
-        BtChange.Visible := True;
-    BtTrueAnswer.Visible := True;
-    BtOurAnswer.Visible := True;
-    BtAnswer.Enabled := False;
+    count := 0;
+    count1 := 0;
+    for i := 1 to 15 do begin
+      if (massiv_edit_visible[i] = True) and (massiv_edit[i].Text = '') then
+        inc(count);
+      if (massiv_edit_visible[i] = True) and (TryStrToInt(massiv_edit[i].Text, s) = False) and (massiv_edit[i].Text <> '') then
+        inc(count1);
+    end;
+    if count > 0 then
+      MessageDlg('Вы заполнили не все поля', mtInformation, [mbOk], 0);
+    if count1 > 0 then
+      MessageDlg('Вы ввели данные некорректно', mtInformation, [mbOk], 0);
+    if ((count = 0) and (count1 = 0)) then begin
+      if change = 3 then
+          BtChange.Visible := False
+      else
+          BtChange.Visible := True;
+      BtTrueAnswer.Visible := True;
+      BtOurAnswer.Visible := True;
+      BtAnswer.Enabled := False;
 
-    for i := 1 to 15 do
-        if massiv_true_answer[i] <> 0 then
-            massiv_answer_student[i] := StrToInt(massiv_edit[i].Text);
-    tree4.Visiting_Nodes2_ForKeysStud (tree4);
-    Check;
+      for i := 1 to 15 do
+          if massiv_true_answer[i] <> 0 then
+              massiv_answer_student[i] := StrToInt(massiv_edit[i].Text);
+      tree4.Visiting_Nodes2_ForKeysStud (tree4);
+      Check;
+    end;
 end;
 
 
